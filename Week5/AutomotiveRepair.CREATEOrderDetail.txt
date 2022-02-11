@@ -1,0 +1,7 @@
+CREATE TABLE public."Order_Detail"
+(
+    order_id integer NOT NULL,
+    service_code character varying(8) COLLATE pg_catalog."default" NOT NULL,
+    mechanic character varying(16) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Order_Detail_pkey" PRIMARY KEY (order_id, service_code)
+)

@@ -1,0 +1,10 @@
+CREATE TABLE public."Vehicle"
+(
+    vehicle_id serial,
+    customer_id integer NOT NULL,
+    "VIN" character varying(18),
+    make character varying(8) NOT NULL,
+    model character varying(24) NOT NULL,
+    year date NOT NULL,
+    CONSTRAINT "Vehicle_pkey" PRIMARY KEY (vehicle_id)
+)

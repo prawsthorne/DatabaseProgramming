@@ -1,0 +1,9 @@
+Brandon, I consider your work COMPLETE. One issue, not too different from other peoples.
+2.5 even though your JOIN worked, it was incorrect. the field should be the same name form each table in the JOIN.
+
+2.4 GROUP BY needs to work with aggregate functions of SUM(), COUNT(), MIN(), AVG(), ETC... on a field that would have something to COUNT(), ETC...
+
+4.b Stay away from using special characters in table or field names (#).
+
+2.5 The SELECTED fields should (most times) come from both sides of the JOIN. Including title as part of the fields SELECTED would have helped with understanding.
+3.3 You needed a FROM public.customer to make the SELECT work properly

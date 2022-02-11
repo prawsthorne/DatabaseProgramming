@@ -1,0 +1,9 @@
+CREATE TABLE public."Customer"
+(
+    customer_id serial,
+    first_name character varying(36),
+    last_name character varying(64) NOT NULL,
+    phone_number character varying(18) NOT NULL,
+    email character varying(128),
+    CONSTRAINT "Customer_pkey" PRIMARY KEY (customer_id)
+)

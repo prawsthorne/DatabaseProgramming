@@ -1,0 +1,9 @@
+CREATE TABLE public."Order"
+(
+    order_id serial,
+    customer_id integer NOT NULL,
+    vehicle_id integer NOT NULL,
+    service_date date NOT NULL,
+    service_advisor character varying(12) NOT NULL,
+    CONSTRAINT "Order_pkey" PRIMARY KEY (order_id)
+)

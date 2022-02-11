@@ -1,0 +1,9 @@
+CREATE TABLE public."ServiceType"
+(
+    service_code character varying(8) NOT NULL,
+    service_name character varying(32) NOT NULL,
+    description character varying(256),
+    book_hours integer NOT NULL,
+    book_rate integer NOT NULL,
+    CONSTRAINT "ServiceType_pkey" PRIMARY KEY (service_code)
+)
