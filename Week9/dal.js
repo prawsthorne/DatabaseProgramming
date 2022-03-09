@@ -112,16 +112,20 @@ const getActors = (request, response) => {
     })
   }
 
-  const getAwards = (request, response) => {
-    var SQL = 'SELECT * FROM vw_film_awards';
-  
-    pool.query(SQL, (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-  }
+//get all awards.
+var getAwards = function() {
+  return new Promise(function(resolve, reject) {
+    const sql = "SELECT film_id, title, COUNT(film_id) AS count \
+      FROM vw_film_awards GROUP BY title, film_id ORDER BY title";
+    pool.query(sql, [], (err, result) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(result.rows);
+      }
+    }); 
+  }); 
+};
 
   module.exports = {
     getFilms,
