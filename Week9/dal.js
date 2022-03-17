@@ -1,9 +1,9 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'peter',
+  user: 'fullstack',
   host: 'localhost',
   database: 'dvdrental',
-  password: 'royisanerd',
+  password: 'fullstack',
   port: 5432,
 })
 
@@ -83,7 +83,7 @@ const getFilmsByActorId = (request, response) => {
 }
 
 const getActors = (request, response) => {
-    var query = require('url').parse(request.url,true).query;
+    //var query = require('url').parse(request.url,true).query;
   
     var SQL = 'SELECT actor_id, first_name, last_name \
         FROM actor ORDER BY last_name ASC';
@@ -97,7 +97,7 @@ const getActors = (request, response) => {
   }
 
   const getActorById = (request, response) => {
-    const id = parseInt(request.params.id)
+    const id = parseInt(request.params.theId)
   
     var SQL = 'SELECT first_name, last_name \
       FROM actor WHERE actor_id = $1'
